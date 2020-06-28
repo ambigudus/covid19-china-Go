@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新冠肺炎疫情实时播报-北京日报</title>
+
+    <!--	<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--    <link href="../static/css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>-->
+    <!--    <link href="../static/css/main/animate.min.css" th:href="@{/css/main/animate.min.css}" rel="stylesheet"/>-->
+    <!--    <link th:href="@{/css/style.css}" rel="stylesheet"/>-->
+    <link href="/css/fy/style.css" rel="stylesheet" />
+    <link href="/css/fy/common.css" rel="stylesheet" />
+    <link href="/css/fy/nav.css" rel="stylesheet" />
+    <link href="/css/fy/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/tool/swiper.min.css" rel="stylesheet" />
+    <!--    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <!--    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>-->
+    <!--    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <script src="/js/fy/jquery.min.js"></script>
+    <script src="/js/fy/popper.min.js"></script>
+    <script src="/js/fy/bootstrap.min.js"></script>
+    <!--    <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/css/main/animate.min.css" rel="stylesheet" />
+    <!--    <th:block th:include="include :: header('肺炎疫情')" />-->
+
+    <!--    <th:block th:include="include :: footer" />-->
+    =
+</head>
+<!--<body class="white-bg">-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="width: 100%;">
+
+    <!--<body style="margin-top: 100排序；">-->
+    <!--<div class=" col-sm-12" >-->
+
+    <nav class="navbar  navbar-expand-md bg-white navbar-dark fixed-top" style="width: 100%;">
+        <!--    <nav  class="nav  navbar    bg-white navbar-dark fixed-top"  style="margin: 1px;padding: 1px;">-->
+
+        <ul class="nav nav-pills " style="width:100%;height: 35px;">
+            <!--        <div style="width: 100%;">-->
+            <!--            <img th:src="@{/img/yq/head_bg.jpg}"  style="width: 100%;" />-->
+            <!--        </div>-->
+            <!--        <div class="d-flex flex-row justify-content-around" style="width:100%;">-->
+            <!--        <li class="nav-item" >-->
+            <!--            <a class="nav-link nav-a" href="#section1" style="width: 100%;" >-->
+            <!--                <img class="nav-link" th:src="@{/img/yq/a1_normal.jpg}" style="width: 100%;" />-->
+            <!--            </a>-->
+            <!--        </li>-->
+            <!--            <div class="nav_divide"></div>-->
+            <!--        <li class="nav-item ">-->
+            <!--            <a class="nav-link nav-a" href="#section2" >-->
+            <!--                <img class="nav-link" th:src="@{/img/yq/a2_normal.jpg}" style="width: 100%;" />-->
+            <!--            </a>-->
+            <!--        </li>-->
+            <!--            <div class="nav_divide"></div>-->
+            <!--        <li class="nav-item ">-->
+
+            <!--            <a class="nav-link nav-a" href="#section3" >-->
+            <!--                <img class="nav-link" th:src="@{/img/yq/a3_normal.jpg}" style="width: 100%;" />-->
+            <!--            </a>-->
+            <!--        </li>-->
+            <!--            <div class="nav_divide"></div>-->
+            <!--            <li class="nav-item">-->
+
+            <!--                <a class="nav-link nav-a" href="#section4">-->
+            <!--                    <img class="nav-link" th:src="@{/img/yq/a4_normal.jpg}" style="width: 100%;" />-->
+            <!--                </a>-->
+            <!--            </li>-->
+            <!--        </div>-->
+
+            <div class="d-flex justify-content-around" style="width:100%;margin: 3px;height: 30px;">
+                <li class="nav-item" style="width: 100%;">
+                    <a class="nav-link nav-a" style="width: 100%;padding: 3px;" href="#section1">疫情地图</a>
+                </li>
+                <div class="nav_divide"></div>
+
+                <li class="nav-item" style="width: 100%;">
+                    <a class="nav-link nav-a" href="#section3" style="width: 100%;padding: 3px;">实时播报</a>
+                </li>
+                <div class="nav_divide"></div>
+                <li class="nav-item" style="width: 100%;">
+                    <a class="nav-link nav-a" href="#section2" style="width: 100%;padding: 3px;">预防知识</a>
+                </li>
+                <div class="nav_divide"></div>
+                <li class="nav-item" style="width: 100%;">
+                    <a class="nav-link nav-a" href="#section4" style="width: 100%;padding: 3px;">辟谣信息</a>
+                </li>
+            </div>
+
+        </ul>
+    </nav>
+    <div style="margin-bottom: 1px;">
+        <!--<div  data-spy="scroll" data-target="#navbar-example2" data-offset="0" style="padding-top: 200px;">-->
+        <!--<div>-->
+        <!--<div id="section1" class="col-sm-12" style="padding-top:70px;padding-bottom:10px;background-color: #eeeeee;">-->
+        <!--<div id="section1"  style="padding-top:10px;padding-bottom:-20px;width: 100%;">-->
+        <div id="section1" style="padding-top:70px;margin-top: -60px;width: 100%;">
+            <div style="width: 100%;">
+                <img src="/img/yq/head_page2.jpg" style="width: 100%;height:100%;" />
+            </div>
+            <div class="col-sm-12 ">
+                <div class="row" style="margin-top: -16px;">
+                    <div class="container mt-3 yq_summary_panel">
+                        <div class="d-flex flex-column mb-3 yq_summary_panel_content"
+                            style="background-color: #ffffff;border-radius: 10px;margin-top: 10px;">
+                            <div class="p-2  yq_summary_panel_date">
+
+                                <span class="ya_summary_panel_date_text">截至</span>
+                                <span class="ya_summary_panel_date_value">2020-06-24 09:41</span>
+                                <span class="ya_summary_panel_date_text">数据统计</span>
+                            </div>
+                            <div class="p-2 yq_summary_panel_type_div">
+                                <span class="yq_summary_panel_type">全国</span>
+                                <!--                        <span class="yq_summary_panel_type_fill">(含港澳台)</span>-->
+                            </div>
+                            <div class="p-2" style="width:100%;margin-top: 15px;margin-bottom: 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class="flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column">
+                                            <div class="  yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">全国确诊</span>
+                                            </div>
+                                            <div class="  ">
+                                                <span class="yq_summary_panel_data_dia_value">85099</span>
+                                                <!--                                                       <span class="yq_summary_panel_data_dia_value" th:text="${chinaDiaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div ">
+                                                <span class="yq_summary_panel_data_text">疑似病例</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+                                                <!--                                                        <span class="yq_summary_panel_data_value" th:text="${chinaData.data.suspectCount}"></span>-->
+                                                <span class="yq_summary_panel_data_sus_value">18</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">治愈人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <span class="yq_summary_panel_data_cur_value">79992</span>
+                                                <!--                                                        <span class="yq_summary_panel_data_cur_value" th:text="${chinaCurCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">死亡人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <span class="yq_summary_panel_data_dea_value">4644</span>
+                                                <!--                                                        <span class="yq_summary_panel_data_dea_value" th:text="${chinaDeaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--            <hr style="margin: 10px;"/>-->
+                    <div class="container mt-3 yq_map_panel">
+                        <div style="height:450px" id="echarts-map-chart"></div>
+                    </div>
+
+                    <div class="container mt-3 yq_map_panel col-sm-12">
+                        <table class=" yq_map_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col" class="thead_td">新增确诊</th>
+                                    <!--                        <th scope="col" class="thead_td">境外输入</th>-->
+                                    <!--                        <th scope="col" class="thead_td">无症状</th>-->
+                                    <th scope="col" class="thead_td">累计确诊</th>
+                                    <th scope="col" class="thead_td">出院人数</th>
+                                    <th scope="col" class="thead_td">累计死亡</th>
+                                    <th scope="col" class="thead_td">统计时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="name_td">湖北</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">68135</td>
+                                    <td class="cur_td">63623</td>
+                                    <td class="dea_td">4512</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">广东</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1634</td>
+                                    <td class="cur_td">1620</td>
+                                    <td class="dea_td">8</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">河南</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1276</td>
+                                    <td class="cur_td">1254</td>
+                                    <td class="dea_td">22</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">浙江</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1269</td>
+                                    <td class="cur_td">1267</td>
+                                    <td class="dea_td">1</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">香港</th>
+                                    <td class="dia_new_td">16</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1177</td>
+                                    <td class="cur_td">1083</td>
+                                    <td class="dea_td">6</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">湖南</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1019</td>
+                                    <td class="cur_td">1015</td>
+                                    <td class="dea_td">4</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">安徽</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">991</td>
+                                    <td class="cur_td">985</td>
+                                    <td class="dea_td">6</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">黑龙江</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">945</td>
+                                    <td class="cur_td">932</td>
+                                    <td class="dea_td">13</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">江西</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">937</td>
+                                    <td class="cur_td">936</td>
+                                    <td class="dea_td">1</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">北京</th>
+                                    <td class="dia_new_td">7</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">850</td>
+                                    <td class="cur_td">584</td>
+                                    <td class="dea_td">9</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">山东</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">792</td>
+                                    <td class="cur_td">785</td>
+                                    <td class="dea_td">7</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">上海</th>
+                                    <td class="dia_new_td">2</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">703</td>
+                                    <td class="cur_td">669</td>
+                                    <td class="dea_td">7</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">江苏</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">654</td>
+                                    <td class="cur_td">653</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">四川</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">589</td>
+                                    <td class="cur_td">573</td>
+                                    <td class="dea_td">0</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">重庆</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">582</td>
+                                    <td class="cur_td">573</td>
+                                    <td class="dea_td">6</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">台湾</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">446</td>
+                                    <td class="cur_td">435</td>
+                                    <td class="dea_td">7</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">福建</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">363</td>
+                                    <td class="cur_td">357</td>
+                                    <td class="dea_td">1</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">河北</th>
+                                    <td class="dia_new_td">2</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">348</td>
+                                    <td class="cur_td">323</td>
+                                    <td class="dea_td">6</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">陕西</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">317</td>
+                                    <td class="cur_td">307</td>
+                                    <td class="dea_td">3</td>
+                                    <td class="date_td">06月23日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">广西</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">254</td>
+                                    <td class="cur_td">252</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">内蒙古</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">238</td>
+                                    <td class="cur_td">236</td>
+                                    <td class="dea_td">1</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">天津</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">198</td>
+                                    <td class="cur_td">192</td>
+                                    <td class="dea_td">3</td>
+                                    <td class="date_td">06月24日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">山西</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">198</td>
+                                    <td class="cur_td">198</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">云南</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">185</td>
+                                    <td class="cur_td">183</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">海南</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">171</td>
+                                    <td class="cur_td">163</td>
+                                    <td class="dea_td">6</td>
+                                    <td class="date_td">06月23日09时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">甘肃</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">157</td>
+                                    <td class="cur_td">137</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">吉林</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">155</td>
+                                    <td class="cur_td">153</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">辽宁</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">154</td>
+                                    <td class="cur_td">147</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">贵州</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">147</td>
+                                    <td class="cur_td">145</td>
+                                    <td class="dea_td">2</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">新疆</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">76</td>
+                                    <td class="cur_td">73</td>
+                                    <td class="dea_td">3</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">宁夏</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">75</td>
+                                    <td class="cur_td">75</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">澳门</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">45</td>
+                                    <td class="cur_td">45</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">青海</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">18</td>
+                                    <td class="cur_td">18</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                                <tr>
+                                    <th class="name_td">西藏</th>
+                                    <td class="dia_new_td">0</td>
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <!--                        <td class="dia_new_td" th:text="${epidemic.increaseNum}"></td>-->
+                                    <td class="dia_sum_td">1</td>
+                                    <td class="cur_td">1</td>
+                                    <td class="dea_td">0</td>
+                                    <td class="date_td">06月24日08时</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                    <div class="container mt-3 yq_summary_panel">
+
+                        <div class="d-flex flex-column mb-3 yq_summary_panel_content"
+                            style="background-color: #ffffff;border-radius: 10px;margin-top: 10px;">
+                            <div class="p-2  yq_summary_panel_date">
+                                <span class="ya_summary_panel_date_text">截至</span>
+                                <span class="ya_summary_panel_date_value">2020-06-25 08:30</span>
+                                <span class="ya_summary_panel_date_text">数据统计</span>
+                            </div>
+                            <div class="p-2 yq_summary_panel_type_div">
+                                <span class="yq_summary_panel_type">北京</span>
+                            </div>
+                            <div class="p-2" style="width:100%;margin-top: 15px;margin-bottom: 15px;">
+                                <div class="d-flex flex-row">
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div ">
+                                                <span class="yq_summary_panel_data_text">新增病例</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+                                                <span class="yq_summary_panel_data_inc_value_bj">13</span>
+                                                <!--                                                                                <span class="yq_summary_panel_data_value_bj" th:text="${beijingData.data.suspectCount}"></span>-->
+                                                <!--                                        <span class="yq_summary_panel_data_inc_value_bj" th:text="${beijingIncCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">确诊病例</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <span class="yq_summary_panel_data_dia_value_bj">863</span>
+                                                <!--                                        <span class="yq_summary_panel_data_dia_value_bj" th:text="${beijingDiaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">治愈人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+                                                <span class="yq_summary_panel_data_cur_value_bj">584</span>
+                                                <!--                                        <span class="yq_summary_panel_data_cur_value_bj" th:text="${beijingCurCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">死亡人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+                                                <span class="yq_summary_panel_data_dea_value_bj">9</span>
+                                                <!--                                        <span class="yq_summary_panel_data_dea_value_bj" th:text="${beijingDeaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="container mt-3 yq_map_panel">
+                        <div style="height:550px" id="echarts-bj-chart"></div>
+                    </div>
+
+
+                    <div class="container mt-3 yq_map_panel">
+                        <table class=" yq_map_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">新增确诊</th>
+                                    <th scope="col">累计确诊</th>
+                                    <th scope="col">出院人数</th>
+                                    <th scope="col">累计死亡</th>
+                                    <th scope="col">统计时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="name_td">丰台区</th>
+                                    <td class="dia_new_td">9</td>
+                                    <td class="dia_sum_td">223</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">境外输入人员</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">174</td>
+                                    <td class="cur_td">173</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">大兴区</th>
+                                    <td class="dia_new_td">4</td>
+                                    <td class="dia_sum_td">91</td>
+                                    <td class="cur_td">4</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">海淀区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">80</td>
+                                    <td class="cur_td">1</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">朝阳区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">77</td>
+                                    <td class="cur_td">2</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">西城区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">60</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">昌平区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">29</td>
+                                    <td class="cur_td">1</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">外地来京人员</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">25</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">通州区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">20</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">房山区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">20</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">东城区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">19</td>
+                                    <td class="cur_td">1</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">石景山区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">15</td>
+                                    <td class="cur_td">1</td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">顺义区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">10</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">怀柔区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">7</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">密云区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">7</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">门头沟区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">5</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">延庆区</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">1</td>
+                                    <td class="cur_td"></td>
+                                    <td class="dea_td"></td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="name_td">地区待确认</th>
+                                    <td class="dia_new_td">0</td>
+                                    <td class="dia_sum_td">0</td>
+                                    <td class="cur_td">401</td>
+                                    <td class="dea_td">9</td>
+                                    <td class="date_td">06月25日08时</td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                    <div class="container mt-3 yq_summary_panel" style="display: none;">
+
+                        <div class="d-flex flex-column mb-3 yq_summary_panel_content"
+                            style="background-color: #ffffff;border-radius: 10px;margin-top: 10px;">
+                            <div class="p-2  yq_summary_panel_date">
+
+                                <span class="ya_summary_panel_date_text">截至</span>
+                                <span class="ya_summary_panel_date_value">2020-06-24 09:40</span>
+                                <span class="ya_summary_panel_date_text">数据统计</span>
+                            </div>
+                            <div class="p-2 yq_summary_panel_type_div">
+                                <span class="yq_summary_panel_type">海外</span>
+                            </div>
+                            <div class="p-2" style="width:100%;margin-top: 15px;margin-bottom: 15px;">
+                                <div class="d-flex flex-row" style="width: 100%;">
+                                    <div class=" flex-fill yq_summary_panel_data" style="width: 100%;">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">确诊病例</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+                                                <span class="yq_summary_panel_data_dia_value">8108200</span>
+                                                <!--                                        <span class="yq_summary_panel_data_dia_value" th:text="${overseasDiaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div ">
+                                                <span class="yq_summary_panel_data_text">疑似病例</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <!--                                        <span class="yq_summary_panel_data_value" th:text="${overseasData.data.suspectCount}"></span>-->
+                                                <span class="yq_summary_panel_data_sus_value"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">治愈人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <span class="yq_summary_panel_data_cur_value">4239258</span>
+                                                <!--                                        <span class="yq_summary_panel_data_cur_value" th:text="${overseasCurCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" flex-fill yq_summary_panel_data">
+                                        <div class="d-flex flex-column ">
+                                            <div class=" flex-fill yq_summary_panel_data_text_div">
+                                                <span class="yq_summary_panel_data_text">死亡人数</span>
+                                            </div>
+                                            <div class=" flex-fill ">
+
+                                                <span class="yq_summary_panel_data_dea_value">437018</span>
+                                                <!--                                        <span class="yq_summary_panel_data_dea_value" th:text="${overseasDeaCount}"></span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="container mt-3 yq_map_panel" style="display: none;">
+                        <p
+                            style="font-size: 18px;font-weight: bolder;color: #333;margin-left: 10px;margin-bottom: -5px;">
+                            海外疫情</p>
+                    </div>
+
+
+                    <div class="container mt-3 yq_map_panel" style="display: none;">
+                        <table class=" yq_map_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 60px;"></th>
+                                    <th scope="col">新增确诊</th>
+                                    <th scope="col">累计确诊</th>
+                                    <th scope="col">出院人数</th>
+                                    <th scope="col">累计死亡</th>
+                                    <th scope="col">统计时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">美国</th>
+                                    <td class="dia_new_td">36015</td>
+                                    <td class="dia_sum_td">2424168</td>
+                                    <td class="cur_td">1020381</td>
+                                    <td class="dea_td">123473</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">巴西</th>
+                                    <td class="dia_new_td">23129</td>
+                                    <td class="dia_sum_td">1106470</td>
+                                    <td class="cur_td">623208</td>
+                                    <td class="dea_td">51271</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">俄罗斯</th>
+                                    <td class="dia_new_td">7413</td>
+                                    <td class="dia_sum_td">598878</td>
+                                    <td class="cur_td">355847</td>
+                                    <td class="dea_td">8349</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">印度</th>
+                                    <td class="dia_new_td">14933</td>
+                                    <td class="dia_sum_td">440215</td>
+                                    <td class="cur_td">248190</td>
+                                    <td class="dea_td">14011</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">英国</th>
+                                    <td class="dia_new_td">921</td>
+                                    <td class="dia_sum_td">307682</td>
+                                    <td class="cur_td">1330</td>
+                                    <td class="dea_td">43011</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">西班牙</th>
+                                    <td class="dia_new_td">248</td>
+                                    <td class="dia_sum_td">293832</td>
+                                    <td class="cur_td">196958</td>
+                                    <td class="dea_td">28325</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">秘鲁</th>
+                                    <td class="dia_new_td">3363</td>
+                                    <td class="dia_sum_td">260810</td>
+                                    <td class="cur_td">148437</td>
+                                    <td class="dea_td">8404</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">智利</th>
+                                    <td class="dia_new_td">3804</td>
+                                    <td class="dia_sum_td">250767</td>
+                                    <td class="cur_td">210570</td>
+                                    <td class="dea_td">4505</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">意大利</th>
+                                    <td class="dia_new_td">113</td>
+                                    <td class="dia_sum_td">238833</td>
+                                    <td class="cur_td">184585</td>
+                                    <td class="dea_td">34675</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">伊朗</th>
+                                    <td class="dia_new_td">2445</td>
+                                    <td class="dia_sum_td">209970</td>
+                                    <td class="cur_td">169160</td>
+                                    <td class="dea_td">9863</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">法国</th>
+                                    <td class="dia_new_td">423</td>
+                                    <td class="dia_sum_td">197804</td>
+                                    <td class="cur_td">74995</td>
+                                    <td class="dea_td">29723</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">德国</th>
+                                    <td class="dia_new_td">43</td>
+                                    <td class="dia_sum_td">192480</td>
+                                    <td class="cur_td">162848</td>
+                                    <td class="dea_td">5001</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">土耳其</th>
+                                    <td class="dia_new_td">1268</td>
+                                    <td class="dia_sum_td">190165</td>
+                                    <td class="cur_td">162848</td>
+                                    <td class="dea_td">5001</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">墨西哥</th>
+                                    <td class="dia_new_td">4577</td>
+                                    <td class="dia_sum_td">185122</td>
+                                    <td class="cur_td">139383</td>
+                                    <td class="dea_td">22584</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">巴基斯坦</th>
+                                    <td class="dia_new_td">3946</td>
+                                    <td class="dia_sum_td">185034</td>
+                                    <td class="cur_td">73471</td>
+                                    <td class="dea_td">3695</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">沙特阿拉伯</th>
+                                    <td class="dia_new_td">3139</td>
+                                    <td class="dia_sum_td">164144</td>
+                                    <td class="cur_td">109885</td>
+                                    <td class="dea_td">1346</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">孟加拉</th>
+                                    <td class="dia_new_td">3412</td>
+                                    <td class="dia_sum_td">119198</td>
+                                    <td class="cur_td">47635</td>
+                                    <td class="dea_td">1545</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">南非</th>
+                                    <td class="dia_new_td">4518</td>
+                                    <td class="dia_sum_td">106108</td>
+                                    <td class="cur_td">55045</td>
+                                    <td class="dea_td">2102</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">加拿大</th>
+                                    <td class="dia_new_td">349</td>
+                                    <td class="dia_sum_td">103767</td>
+                                    <td class="cur_td">66135</td>
+                                    <td class="dea_td">8512</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                                <tr>
+                                    <!--                    <tr th:each="epidemic : ${epidemicsOverseas}">-->
+                                    <th class="name_td">卡塔尔</th>
+                                    <td class="dia_new_td">1176</td>
+                                    <td class="dia_sum_td">89579</td>
+                                    <td class="cur_td">71501</td>
+                                    <td class="dea_td">99</td>
+                                    <td class="date_td">06月24日09时</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <hr class="divide_line">
+        <div id="section3" class="container-fluid" style="padding-top:70px;margin-top: -60px;">
+            <h1 class="yq_h_title">实时播报</h1>
+            <!--    <div class="col-sm-12 gray-bg">-->
+
+            <div class="row gray-bg">
+                <div style="height: 12px;width: 100%;">
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">昨天</span>
+                            <span class="qy_time_line_date_detail">06-24 08:33</span>
+                            <span class="qy_time_line_date_badge">最新</span>
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">北京昨日新增7例确诊病例，分布在这两个区</p>
+                            <p class="qy_timeline_content_div_summary">
+                                6月23日0时至24时，北京市新增报告本地确诊病例7例、疑似病例4例、无症状感染者1例；无新增报告境外输入确诊病例、疑似病例、无症状感染者。</p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef29da7e4b01e723d2dee22?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">昨天</span>
+                            <span class="qy_time_line_date_detail">06-24 08:00</span>
+
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">上海昨日新增2例境外输入病例，来自这俩国家</p>
+                            <p class="qy_timeline_content_div_summary">6月23日0—24时，上海市通过口岸联防联控机制，报告2例境外输入性新冠肺炎确诊病例。</p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef295bfe4b01e723d2ddb9b?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">昨天</span>
+                            <span class="qy_time_line_date_detail">06-24 07:50</span>
+
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">31省区市新增确诊12例，本土9例（北京7例，河北2例）</p>
+                            <p class="qy_timeline_content_div_summary">
+                                6月23日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例12例，其中境外输入病例3例（上海2例，陕西1例），本土病例9例（北京7例，河北2例）；无新增死亡病例；新增疑似病例4例，均为本土病例（均在北京）。
+                            </p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef29373e4b01e723d2dd756?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">2天前</span>
+                            <span class="qy_time_line_date_detail">06-23 09:15</span>
+
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">河北昨日新增境外输入无症状感染者4例</p>
+                            <p class="qy_timeline_content_div_summary">
+                                2020年6月22日0—24时，河北省无新增报告新型冠状病毒肺炎确诊病例，无新增死亡病例，无新增疑似病例,治愈出院1例（本地确诊病例）。</p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef15275e4b01e723d2c27e6?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">2天前</span>
+                            <span class="qy_time_line_date_detail">06-23 09:14</span>
+
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">10岁小学生确诊后，雄安这地放出高清大图紧急寻人！</p>
+                            <p class="qy_timeline_content_div_summary">
+                                河北雄安新区安新县一10岁小学生确诊新冠肺炎后，当地相关部门紧急寻找潜在的密切接触者，甚至放出了一组“高清大图”。</p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef14176e4b01e723d2c0108?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">2天前</span>
+                            <span class="qy_time_line_date_detail">06-23 09:04</span>
+
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+
+                            </div>
+                        </div>
+
+                        <div class="qy_timeline_content_div">
+                            <p class="qy_timeline_content_div_title">北京昨日新增13例确诊病例，分布在四个区</p>
+                            <p class="qy_timeline_content_div_summary">
+                                6月22日0时至24时，北京市新增报告本地确诊病例13例、疑似病例2例、无症状感染者1例；无新增报告境外输入确诊病例、疑似病例、无症状感染者。</p>
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ef14cf9e4b01e723d2c19fb?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="qy_timeline_content_more_div">
+                    <a class="qy_timeline_content_more_a"
+                        href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5e2656cde4b0745e67f74e58/AP5e2657bce4b0745e67f74fb5?isshare=1&app=d8fdbae0fb370d19&from=groupmessage">查看更多>></a>
+                </div>
+            </div>
+
+
+            <!--    </div>-->
+
+        </div>
+
+        <hr class="divide_line">
+        <div id="section2" class="container-fluid" style="padding-top:70px;margin-top: -60px;">
+            <div class="col-sm-12 ">
+                <div class="row">
+
+                    <h1 class="yq_h_title">预防知识</h1>
+
+                    <!--        <div class="d-flex  know_div" th:each="know : ${knows}"  >-->
+                    <!--            <div class="p-2  know_div_img">-->
+                    <!--&lt;!&ndash;                <img  th:src="https://static.runoob.com/images/mix/img_nature_wide.jpg">&ndash;&gt;-->
+                    <!--                <img  th:src="${know.imgUrl}">-->
+                    <!--            </div>-->
+                    <!--            <div class="p-2 flex-grow-1 know_div_title"  >-->
+                    <!--                <p class="qy_timeline_content_div_know_title" th:text="${know.title}"></p>-->
+                    <!--                <a class="qy_timeline_content_div_href" th:href="${know.url}">查看详细内容>></a>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+
+
+                    <div class="col-sm-12">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/03/09/a90b972f5fedc67a73c62fbe8ae0d3a5.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">家中无新冠肺炎患者 卫生间无需特殊消毒</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e65fb1de4b00ca727d979a0?isshare=1&amp;app=b76c487ddb87bbec&amp;contentType=0&amp;isBjh=0">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/29/dc7d0e27c95a12a2ee530b38ec467285.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">疫情期间孩子生病去不去医院？专家给出“三个一”
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e5a293be4b0b3a4bd8b988c?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/29/753070990cbf9702f84bf2c5b3e9e49e.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">非新冠肺炎患者如何居家康复？医生：不要完全卧床
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e5a21c1e4b0b3a4bd8b8ac7?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/29/5474657420d3f7790d6312a9af3b9b0e.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">新冠肺炎患者出院后应这样锻炼</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e5a1d1ee4b0b3a4bd8b7f8a?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/29/4deb21fbd68706b9dfadc794dba724fb.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">耳朵痛、眼镜起雾怎么办？一文解决戴口罩9大困扰
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e5a0975e4b0b3a4bd8b5db5?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/25/cf325c761787c58692dc7e414531b1ef.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">如何避免戴口罩造成的皮肤损伤？协和专家：注意这几点
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e54dedae4b09a3627c08d86?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/25/1cc338d5962baaf2fc0065b854c96c13.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">为何新冠肺炎康复者的血浆可以拿来治病？</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e54dca8e4b09a3627c08b0c?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/25/b4f6a09984274c96252c2cbf42db1656.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">面对疫情，孕妈妈们该怎么办？专家告诉你——</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e54dc35e4b09a3627c08a83?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/25/6634cb718be7824195d9d749ddd64f97.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">居家也带N95口罩？太土豪！没必要！</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e54dbd5e4b09a3627c089ec?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/25/a9f55b391987761ba56d5bcfc3e9840c.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">经常戴口罩青春痘加重了怎么办？协和医院专家支招
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e54d79fe4b09a3627c0826c?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/22/e7b22ef6092d81f466e2907de72f72fb.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">孩子整天在家如何注意安全？儿童医院专家连说关键几条
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e50e806e4b09a3627bc8672?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/16/f7fd3e4dab29d93649c0ab3a795afcf0.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">上下班时防控疫情，您应该这么办！</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e4906c8e4b0c4aab140f5d5?isshare=1&amp;app=921FB0E0-6E1B-4417-A130-ABB4FD50418E">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/15/e1c6fc8cb7cf8ed9fa5f8a3cf87d6e6f.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">小区有确诊病例，如何做好防护？</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e47efd8e4b0c4aab1404689?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/15/61f3b8807449d14d728cf7c77e3453f1.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">盲目消毒、过度消毒没必要！消毒原则：科学适度</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e47afbce4b0c4aab13fdd61?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/14/106c481f491e31ee175042ef47373000.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">解读 | 新冠病毒特免血浆制品是什么？</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e467537e4b0c4aab13ce930?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/14/39ca6cee4e2ca3a812f6204200edc1df.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">当心！电梯消毒，不能对着按钮喷洒液体</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e46734be4b0c4aab13ce74f?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/14/a5d1d76bee82ae0c851947e5786c2e37.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">潜伏期共用洗衣机会不会感染？疾控中心专家：可能性极小
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e465b39e4b0c4aab13ccceb?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/14/570641ed0147fd9f8eb9b791745f520a.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">中国疾控专家建议外出回家用酒精消毒手机</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e46585de4b0c4aab13cc93f?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/14/8242b32a610b9328f6ce7f04926612d5.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">中疾控专家：确诊或疑似患者不该佩戴呼吸阀式口罩
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e465771e4b0c4aab13cc7f4?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/12/6490620482c49866cb6d8efc8ac02157.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">宅在家怎么让孩子吃好？专家来支招</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e43b043e4b0c4aab139b73f?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/12/bc458bd90ebd2e483258a447ef0438b2.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">疫情当下为什么一定要好好吃饭？中疾控专家释疑</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e43af48e4b0c4aab139b60a?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/11/0cf02570cc956c7653181435eeb438e4.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">居家消毒，你真的做对了吗？</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e426cece4b0c4aab13878ef?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/11/4d4d8ea5cdc4745ea29f18e133585d43.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">非常时期，眼科专家教你眼部防护要领</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e426bf5e4b0c4aab138778e?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/11/50312be568b5183c352add85e47f0afb.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">面对疫情，请收下这份“心理处方”</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e426b1ae4b0c4aab13875ff?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/11/30e7095927bd1d497265e70ed91317de.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">一图看懂！出门购物全流程防护指南来了！</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e425d25e4b0c4aab138629f?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/10/f89e1a49fabbd222c9f05424148d4b9f.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">使用公共卫生间会感染病毒吗？合租房个人防护看这里
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e4166e8e4b0c4aab137b1e4?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/10/5d3cd2a897069eca706182ebfca8460d.jpeg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">收好这份防疫守则 刚复工的你一定用得到！</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e4163eae4b0c4aab137ad17?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row" style="margin-bottom: 40px;">
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/10/0c3eff4640684426b338e6daa2fce9bd.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">疫情期间做好防护，教您如何处理废弃口罩</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5de8be9be4b0fe93cc167bbc/AP5e41604ae4b0c4aab137a666?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/10/9ef1489a2b1cd5808141b8c08f9e7204.jpg">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">想出去遛弯儿又得居家防控 老年人可这样化解矛盾心理
+                                                </p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e411dc5e4b0c4aab13727f5?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  know_div">
+                                            <div class="p-2  know_div_img">
+                                                <img
+                                                    src="https://bjrbh5.bjd.com.cn/profile/know/2020/02/10/935096a9fe3bd58735af50e43fed5a41.png">
+                                            </div>
+                                            <div class="p-2 flex-grow-1 know_div_title">
+                                                <p class="qy_timeline_content_div_know_title">气溶胶传播？别慌，听专家说清楚</p>
+                                                <a class="qy_timeline_content_div_href"
+                                                    href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e410bf8e4b0c4aab1370bce?isshare=1&amp;app=b76c487ddb87bbec">查看详细内容>></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                    <div class="swiper-slide">Slide 3</div>-->
+                                <!--                    <div class="swiper-slide">Slide 4</div>-->
+                                <!--                    <div class="swiper-slide">Slide 5</div>-->
+                                <!--                    <div class="swiper-slide">Slide 6</div>-->
+                                <!--                    <div class="swiper-slide">Slide 7</div>-->
+                                <!--                    <div class="swiper-slide">Slide 8</div>-->
+                                <!--                    <div class="swiper-slide">Slide 9</div>-->
+                                <!--                    <div class="swiper-slide">Slide 10</div>-->
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <hr class="divide_line">
+        <div id="section4" class="col-sm-12" style="padding-top:70px;margin-top: -60px;">
+            <h1 class="yq_h_title">辟谣信息</h1>
+            <!--    <div class="col-sm-12 ">-->
+            <div class="row gray-bg">
+                <div style="height: 12px;width: 100%;"> </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">7天前</span>
+                            <span class="qy_time_line_date_detail">06-18 08:12</span>
+                            <span class="qy_time_line_date_badge">最新</span>
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">江苏常州有小区人员确诊？当地回应：已排除新冠肺炎<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">
+                                据常州发布微信公众号，6月17日，常州市多个微信朋友圈传播“常州某小区有新冠肺炎确诊病例，被防疫车送到三院”的信息，受到市民广泛关注。经核查：市民徐某于6月16日因“牙痛伴胸闷不适”到常州市第二人民医院就诊，按规定进行新冠肺炎病毒抗体检测，初步结果显示IgM抗体呈现弱阳性；6月17日上午被送至常州市第三人民医院，经新冠肺炎病毒核酸及抗体复核检测，结果均为阴性，结合流行病学调查，排除新冠肺炎。目前，徐某由其家人接回家中。
+                            </p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5eeaa97de4b01e723d217164?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">1月前</span>
+                            <span class="qy_time_line_date_detail">05-15 13:57</span>
+
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">有人造谣“武汉一对夫妻确诊新冠死亡”，公安出手了<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">据武汉市汉阳区委宣传部官方微博 @知音汉阳
+                                消息，近日，关于“汉阳某小区夫妻二人确诊新冠肺炎，已经死亡”的信息，在微信群中传播。经核查，该信息为谣言。公安机关已对相关涉案人员李某、刘某依法做出处理。</p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ebe2cf8e4b0be621cb65b54?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">1月前</span>
+                            <span class="qy_time_line_date_detail">05-14 07:36</span>
+
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">网民造谣“武汉一小区健康码全转红码”被行拘<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">
+                                据武汉市公安局东西湖区分局官方微博消息，近日，有网民在网络上发文并附视频称“长青街三民小区居民健康码全部转红码、三民小区门口全是特警守门”。5月13日，武汉东西湖区警方发布通报，经核实，此消息为谣言。公安机关已对涉案人员陈某依法给予行政拘留处罚。
+                            </p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ebc7c81e4b024b07b1cb756?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">1月前</span>
+                            <span class="qy_time_line_date_detail">05-13 08:16</span>
+
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">吉林多地高风险？这条“吉林省政府通知”是假的！<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">近日，一条“吉林省政府通知”的消息，在吉林人的微信中被大量转发：</p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5ebb3592e4b024b07b1b733b?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">1月前</span>
+                            <span class="qy_time_line_date_detail">05-12 14:46</span>
+
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">官方辟谣！巴彦淖尔市医院核酸检测出2名阳性患者是不实传言<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">
+                                记者从内蒙古巴彦淖尔市委宣传部获悉，近日，“巴彦淖尔市医院核酸检测出2名阳性患者”，引发社会关注。2020年5月12日，巴彦淖尔市医院郑重声明：这是谣言！市医院目前没有新冠肺炎疑似病例和确诊病例。
+                            </p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5eba358ce4b024b07b1aca2b?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="qy_timeline_div">
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_div_circle" style="margin-top: 5px;">
+
+
+                        </div>
+                        <div class="qy_time_line_date_div">
+                            <span class="qy_time_line_date">1月前</span>
+                            <span class="qy_time_line_date_detail">05-06 18:12</span>
+
+                            <!--                        <span class="qy_time_line_date">30分钟前</span>-->
+                            <!--                        <span class="qy_time_line_date_detail">01.25 18:30</span>-->
+                            <!--                        <span class="qy_time_line_date_badge">最新</span>-->
+                        </div>
+                    </div>
+                    <div class="qy_timeline_css_div">
+                        <div class="qy_timeline_line_div">
+                            <div class="qy_timeline_div_line">
+                            </div>
+                        </div>
+                        <div class="qy_timeline_content_div">
+                            <span class="qy_timeline_content_div_title">绥芬河口岸旅检通道5月中旬起重新开放？<span
+                                    class='qy_timeline_content_div_span_title_jia1'>假</span><span
+                                    class='qy_timeline_content_div_span_title_jia2'>谣言</span></span>
+                            <!--                        <span class="qy_timeline_content_div_span_title" th:text="${rumor.title}"></span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <!--                        <span class="badge">假</span>-->
+                            <!--                        <span class="badge badge-danger qy_timeline_content_div_span_title_jia2">假谣言</span>-->
+                            <p class="qy_timeline_content_div_summary">经我馆5月6日向国内主管部门核实，绥芬河口岸旅检通道将继续关闭，何时重新开放将另行通告。</p>
+                            <!--                                                <span class="qy_timeline_content_div_span_title_jia1" style="float: left;">假</span>-->
+                            <!--                        <span class="qy_timeline_content_div_span_title_jia2">谣言</span>-->
+                            <a class="qy_timeline_content_div_href"
+                                href="https://ie.bjd.com.cn:443/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5eb275b6e4b077c45c61a8a7?isshare=1">查看详细报道>></a>
+                        </div>
+                    </div>
+                </div>
+                <!--        </div>-->
+                <div class="qy_timeline_content_more_div">
+                    <a class="qy_timeline_content_more_a"
+                        href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5e2656cde4b0745e67f74e58/AP5e2657bce4b0745e67f74fb5?isshare=1&app=d8fdbae0fb370d19&from=groupmessage">查看更多>></a>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+
+
+
+    </div>
+    <!--<div class="fixed-bottom" style="background-color: #ffffff;z-index: 100;">-->
+    <!--    <div class="container" style="text-align: center;">-->
+    <!--        <a href="#"  class="btn btn-primary"  style="width: 45%;margin: 5px;" onclick="shareShow();"> 下载北京日报客户端</a>-->
+    <!--        <a href="#"  class="btn btn-success"  style="width: 45%;margin: 5px;" onclick="shareShow();"> 分享</a>-->
+
+    <!--    </div>-->
+    <!--</div>-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- bootstrap-table 表格插件 -->
+    <script src="/ajax/libs/bootstrap-table/bootstrap-table.min.js?v=20191219"></script>
+    <script src="/ajax/libs/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="/ajax/libs/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js"></script>
+    <script src="/ajax/libs/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+    <script src="/ajax/libs/bootstrap-table/extensions/columns/bootstrap-table-fixed-columns.js"></script>
+    <!-- jquery-validate 表单验证插件 -->
+    <script src="/ajax/libs/validate/jquery.validate.min.js"></script>
+    <script src="/ajax/libs/validate/messages_zh.min.js"></script>
+    <script src="/ajax/libs/validate/jquery.validate.extend.js"></script>
+    <!-- jquery-validate 表单树插件 -->
+    <script src="/ajax/libs/bootstrap-treetable/bootstrap-treetable.js"></script>
+    <!-- jquery-export 表格导出插件 -->
+    <script src="/ajax/libs/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
+    <script src="/ajax/libs/bootstrap-table/extensions/export/tableExport.js"></script>
+    <!-- 遮罩层 -->
+    <script src="/ajax/libs/blockUI/jquery.blockUI.js"></script>
+    <script src="/ajax/libs/iCheck/icheck.min.js"></script>
+    <script src="/ajax/libs/layer/layer.min.js"></script>
+    <script src="/ajax/libs/layui/layui.js"></script>
+    <script src="/ruoyi/js/common.js?v=4.1.0"></script>
+    <script src="/ruoyi/js/ry-ui.js?v=4.1.0"></script>
+    <script>
+        var ctx = "\/";
+    </script>
+
+
+    <script src="/ajax/libs/report/echarts/echarts-all.js"></script>
+    <script src="/ajax/libs/report/echarts/pro/china.js"></script>
+    <script src="/ajax/libs/report/echarts/pro/beijing.js"></script>
+
+
+    <script src="/js/fy/fy_map.js"></script>
+
+    <script src="/js/tool/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
