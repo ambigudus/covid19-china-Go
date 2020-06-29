@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/ambigudus/covid19-china-Go/model"
 	"github.com/go-kit/kit/endpoint"
 	httptransport "github.com/go-kit/kit/transport/http"
 	"github.com/gorilla/mux"
-	"github.com/ritwickdey/covid-19-india-golang/model"
 )
 
 func MakeGetAllStatsEndpoint(s Service) endpoint.Endpoint {
@@ -74,7 +74,7 @@ func DecodeGetFormattedStatsReq(_ context.Context, r *http.Request) (interface{}
 	endDateStr := r.FormValue("endDate")
 
 	if startDateStr == "" {
-		startDateStr = `03-04-2020`  // 默认值
+		startDateStr = `03-04-2020` // 默认值
 	}
 
 	startDate, err := time.Parse(model.DateFormatPattern, startDateStr)

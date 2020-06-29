@@ -3,7 +3,7 @@ package api
 import (
 	"time"
 
-	"github.com/ritwickdey/covid-19-india-golang/model"
+	"github.com/ambigudus/covid19-china-Go/model"
 )
 
 type Service interface {

@@ -9,17 +9,17 @@ import (
 	"os"
 	"time"
 
-	"github.com/ritwickdey/covid-19-india-golang/api"
-	"github.com/ritwickdey/covid-19-india-golang/model"
-	"github.com/ritwickdey/covid-19-india-golang/parser"
+	"github.com/ambigudus/covid19-china-Go/api"
+	"github.com/ambigudus/covid19-china-Go/model"
+	"github.com/ambigudus/covid19-china-Go/parser"
 )
 
 var WEB_END_POINT = "https://www.statista.com/statistics/1090007/china-confirmed-and-suspected-wuhan-coronavirus-cases-region/" //数据官网
-var FILE_PATH = "./output-stats.json"  //生成的json 日期：省:三项
+var FILE_PATH = "./output-stats.json"                                                                                           //生成的json 日期：省:三项
 
 func main() {
 
-	args := os.Args[1:]  //命令行 输出json名
+	args := os.Args[1:] //命令行 输出json名
 
 	if len(args) > 0 {
 		FILE_PATH = args[0]
@@ -27,7 +27,7 @@ func main() {
 
 	fmt.Println(FILE_PATH)
 
-	existingData, err := readExistingData()  //获取本地现有数据
+	existingData, err := readExistingData() //获取本地现有数据
 	throwIfErr(err)
 	model.DataCache.UpdateCache(existingData) //将本地更新至dataCache
 	go fetchDataPeriodically()
@@ -68,7 +68,7 @@ func CORS(h http.Handler) http.Handler {
 func fetchDataPeriodically() {
 	model.DataCache.UpdateCache(dataParserFromOfficialSite())
 
-	for range time.NewTicker(120 * time.Minute).C {  //120分钟更新一次
+	for range time.NewTicker(120 * time.Minute).C { //120分钟更新一次
 		model.DataCache.UpdateCache(dataParserFromOfficialSite())
 	}
 }
@@ -83,7 +83,7 @@ func dataParserFromOfficialSite() model.Covid19StatMapDateWise {
 	existingData, err := readExistingData()
 	throwIfErr(err)
 
-	existingData[todayKey] = currentData  //追加(修改)今日最新数据
+	existingData[todayKey] = currentData //追加(修改)今日最新数据
 
 	optJson, err := json.Marshal(existingData)
 	throwIfErr(err)
@@ -104,7 +104,7 @@ func readExistingData() (model.Covid19StatMapDateWise, error) {
 
 	output := model.Covid19StatMapDateWise{}
 
-	err = json.Unmarshal(dataBytes, &output)  //json变成结构体
+	err = json.Unmarshal(dataBytes, &output) //json变成结构体
 
 	return output, err
 

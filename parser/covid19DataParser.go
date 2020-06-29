@@ -3,7 +3,7 @@ package parser
 import (
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/ritwickdey/covid-19-india-golang/model"
+	"github.com/ambigudus/covid19-china-Go/model"
 	"io"
 	"net/http"
 	"regexp"
@@ -74,13 +74,13 @@ func (c *covid19DataParser) processTRSelection(index int, selection *goquery.Sel
 
 func (c *covid19DataParser) processTDSelection(index int, selection *goquery.Selection) {
 
-	re := regexp.MustCompile(`\*|\#`)
+	re := regexp.MustCompile(`[*#]`)
 	text := re.ReplaceAllString(selection.Text(), "")
-	text = strings.ReplaceAll(text,",","")
+	text = strings.ReplaceAll(text, ",", "")
 
 	switch index {
 	case 0:
-		c.currentParsedData.StateName = strings.ReplaceAll(text,"\n","")
+		c.currentParsedData.StateName = strings.ReplaceAll(text, "\n", "")
 		break
 	case 1:
 		break
