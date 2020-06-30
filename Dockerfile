@@ -1,16 +1,12 @@
-FROM golang as build
+FROM golang
 
 WORKDIR /go/src/github.com/ambigudus/covid19-china-Go
-ENV GOPROXY https://goproxy.cn
-ENV GO111MODULE on
+ENV GOPROXY=https://goproxy.cn
+COPY go.mod .
 
-ADD go.mod .
-ADD go.sum .
-RUN go mod download
+COPY go.sum .
 
+RUN GO111MODULE=on go mod download
 
 COPY . .
-RUN  GOOS=linux CGO_ENABLED=0 go build -ldflags="-s -w" -installsuffix cgo -o app main.go
-FROM scratch as prod
-
 CMD ["go", "run", "main.go"]
