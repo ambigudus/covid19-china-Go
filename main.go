@@ -45,7 +45,6 @@ func main() {
 func CORS(h http.Handler) http.Handler {
 
 	sites := make(map[string]string)
-	//sites["https://novelcoronaindia.info"] = "https://novelcoronaindia.info"
 	sites["http://localhost:3000"] = "http://localhost:3000"
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
